@@ -43,32 +43,4 @@
   
 <h2> docker-compose.yml</h2>
   
-version: '3'
-
-services:
-  teste-postgres-compose:
-    image: postgres
-    environment:
-      POSTGRES_PASSWORD: "Postgres2022!"
-    ports:
-      - "5432:5432"
-    volumes:
-      - /opt/postgres/data:/var/lib/postgresql/data 
-    networks:
-      - postgres-compose-network
-      
-  teste-pgadmin-compose:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "mralbuquerque2@gmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "Postgres2022!"
-    ports:
-      - "15432:80"
-    depends_on:
-      - teste-postgres-compose
-    networks:
-      - postgres-compose-network
-
-networks: 
-  postgres-compose-network:
-    driver: bridge
+O arquivo docker-compose.yml está na raiz deste projeto.
