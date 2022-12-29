@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.escolaeh.sge.Carga;
 import br.com.escolaeh.sge.modelo.Aluno;
+import br.com.escolaeh.sge.modelo.Disciplina;
 import br.com.escolaeh.sge.repositorio.AlunoRepositorio;
+import br.com.escolaeh.sge.repositorio.DisciplinaRepositorio;
 
 @RestController
 @RequestMapping("/alunos")
@@ -22,6 +25,9 @@ public class AlunoController {
 
 	@Autowired
 	private AlunoRepositorio alunoRepositorio;
+
+	@Autowired
+	private DisciplinaRepositorio disciplinaRepositorio;
 
 	@GetMapping
 	public List<Aluno> listar() {
@@ -50,6 +56,22 @@ public class AlunoController {
 	@DeleteMapping("/{matricula}")
 	public void deletar(@PathVariable Long matricula) {
 		alunoRepositorio.deleteById(matricula);
+	}
+	
+	// Buscar
+	@GetMapping("/count")
+	public Long contar() {
+		return alunoRepositorio.count();
+	}
+
+	@GetMapping("/carga")
+	private void cargaInicial() {
+		for (int i = 0; i < 60; i++) {
+			List<Aluno> alunos = alunoRepositorio.saveAllAndFlush(Carga.alunos());
+			List<Disciplina> dcplns = Carga.criarDisciplinas(alunos);
+			dcplns = Carga.popularDisciplinas(dcplns, alunos);
+			disciplinaRepositorio.saveAll(dcplns);
+		}
 	}
 
 }
