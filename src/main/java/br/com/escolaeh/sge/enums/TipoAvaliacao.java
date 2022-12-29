@@ -1,4 +1,4 @@
-package br.com.escolaeh.sge.modelo;
+package br.com.escolaeh.sge.enums;
 
 public enum TipoAvaliacao {
 	

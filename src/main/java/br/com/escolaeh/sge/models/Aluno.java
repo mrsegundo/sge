@@ -1,4 +1,4 @@
-package br.com.escolaeh.sge.modelo;
+package br.com.escolaeh.sge.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;

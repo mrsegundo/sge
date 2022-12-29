@@ -1,12 +1,12 @@
-package br.com.escolaeh.sge;
+package br.com.escolaeh.sge.configs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import br.com.escolaeh.sge.modelo.Aluno;
-import br.com.escolaeh.sge.modelo.Disciplina;
+import br.com.escolaeh.sge.models.Aluno;
+import br.com.escolaeh.sge.models.Disciplina;
 
 public class Carga {
 

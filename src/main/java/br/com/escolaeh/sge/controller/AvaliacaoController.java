@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.escolaeh.sge.modelo.Aluno;
-import br.com.escolaeh.sge.modelo.Avaliacao;
-import br.com.escolaeh.sge.repositorio.AlunoRepositorio;
-import br.com.escolaeh.sge.repositorio.AvaliacaoRepositorio;
+import br.com.escolaeh.sge.models.Aluno;
+import br.com.escolaeh.sge.models.Avaliacao;
+import br.com.escolaeh.sge.repositories.AlunoRepositorio;
+import br.com.escolaeh.sge.repositories.AvaliacaoRepositorio;
 
 @RestController
 @RequestMapping("/avaliacoes")

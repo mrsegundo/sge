@@ -1,4 +1,4 @@
-package br.com.escolaeh.sge.modelo;
+package br.com.escolaeh.sge.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import br.com.escolaeh.sge.enums.TipoAvaliacao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

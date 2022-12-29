@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.escolaeh.sge.modelo.Disciplina;
-import br.com.escolaeh.sge.repositorio.DisciplinaRepositorio;
+import br.com.escolaeh.sge.models.Disciplina;
+import br.com.escolaeh.sge.repositories.DisciplinaRepositorio;
 
 @RestController
 @RequestMapping("/disciplinas")
